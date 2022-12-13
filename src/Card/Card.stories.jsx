@@ -35,7 +35,6 @@ export const RedundantClickEvent = Template.bind({});
 RedundantClickEvent.decorators = [(Story, props) => {
   const linkRef = useRef();
   const redundantClick = (e) => {
-    console.log(e.target.tagName);
     if(window.getSelection()?.toString()) {
       return
     }
