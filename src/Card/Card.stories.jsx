@@ -15,6 +15,12 @@ export const Default = Template.bind({});
 
 export const AsLink = Template.bind({});
 AsLink.args = {
+  as: 'a'
+}
+
+export const AsLinkStyled = Template.bind({});
+AsLinkStyled.storyName = 'As Link (Styled)'
+AsLinkStyled.args = {
   as: 'a',
   className: 'as-link'
 }

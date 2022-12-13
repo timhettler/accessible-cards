@@ -91,10 +91,10 @@
 }
 
 // AS LINK
-// .container.as-link {
-//   text-decoration: none;
-//   color: #000;
-// }
+.container.as-link {
+  text-decoration: none;
+  color: #000;
+}
 
 // THE PSEUDO-CONTENT TRICK
 .pct {
@@ -113,10 +113,10 @@
     }
   }
 
-  // .text-container {
-  //   position: relative;
-  //   z-index: 1;
-  // }
+  .text-container {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 // AS BUTTON
