@@ -65,6 +65,7 @@ RedundantClickEventWithAffordances.args = {
 }
 
 export const WithMultipleInteractions = (args) => <CardFinal {...args} />
+WithMultipleInteractions.storyName = 'With Multiple Interactions';
 WithMultipleInteractions.decorators = [(Story, props) => {
   const linkRef = useRef();
   const redundantClick = (e) => {
@@ -72,8 +73,26 @@ WithMultipleInteractions.decorators = [(Story, props) => {
       return
     }
 
-    let t = e.target;
+    if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') {
+      return
+    }
 
+    linkRef.current.click()
+  }
+
+  return Story({args: {linkRef: linkRef, onClick: redundantClick, ...props.args}});
+}];
+
+export const WithMultipleInteractionsFixed = (args) => <CardFinal {...args} />
+WithMultipleInteractionsFixed.storyName = 'With Multiple Interactions (Fixed)';
+WithMultipleInteractionsFixed.decorators = [(Story, props) => {
+  const linkRef = useRef();
+  const redundantClick = (e) => {
+    if(window.getSelection()?.toString()) {
+      return
+    }
+
+    let t = e.target;
     while (t !== e.currentTarget) {
       if (t.tagName === 'A' || t.tagName === 'BUTTON') {
         return
