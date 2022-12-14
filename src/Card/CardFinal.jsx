@@ -21,7 +21,7 @@ export const CardFinal = ({as, className, linkRef, ...rest}) => {
       <div className={cx('interactive-group')}>
         <div className={cx('link')} aria-hidden="true" id="unique-link-id">Learn More <img className={cx('link__icon')} src="/chevron.svg" alt="" /></div>
         <ul className={cx('social')}>
-          <li><a href="https://www.instagram.com/p/Cjszxx5Au1u/" target="_blank" rel="noreferrer">
+          <li><a href="https://www.instagram.com/workandco/" target="_blank" rel="noreferrer">
             <VisuallyHidden>Instagram</VisuallyHidden>
             {InstagramIcon}
           </a></li>
