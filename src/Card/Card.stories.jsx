@@ -100,7 +100,7 @@ WithMultipleInteractionsFixed.decorators = [(Story, props) => {
       t = t.parentNode;
     }
 
-    linkRef.current.click()
+    linkRef.current.dispatchEvent(new MouseEvent('click', e));
   }
 
   return Story({args: {linkRef: linkRef, onClick: redundantClick, ...props.args}});
